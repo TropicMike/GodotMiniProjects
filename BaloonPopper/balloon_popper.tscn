@@ -1,0 +1,25 @@
+[gd_scene load_steps=4 format=3 uid="uid://dwfq3j27hopcy"]
+
+[ext_resource type="ArrayMesh" uid="uid://bo5r2xhjy6dmd" path="res://BaloonPopper/Balloon.obj" id="1_ccmcf"]
+[ext_resource type="Material" uid="uid://xpoug0e181av" path="res://BaloonPopper/balloon_red.tres" id="2_ux2bo"]
+
+[sub_resource type="Environment" id="Environment_ccmcf"]
+background_mode = 1
+background_color = Color(0, 0, 0.882353, 1)
+
+[node name="Main" type="Node3D"]
+
+[node name="Balloon" type="MeshInstance3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0887355, 0, -0.12954)
+mesh = ExtResource("1_ccmcf")
+surface_material_override/0 = ExtResource("2_ux2bo")
+
+[node name="DirectionalLight3D" type="DirectionalLight3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 0.488393, 0.872624, 0, -0.872624, 0.488393, -0.254845, 3.49077, 2.23284)
+
+[node name="Camera3D" type="Camera3D" parent="."]
+transform = Transform3D(1, 0, 0, 0, 1, 0, 0, 0, 1, -0.0830216, 0.499486, 3.14851)
+fov = 78.7844
+
+[node name="WorldEnvironment" type="WorldEnvironment" parent="."]
+environment = SubResource("Environment_ccmcf")

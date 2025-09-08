@@ -5,7 +5,7 @@
 
 [sub_resource type="Environment" id="Environment_ccmcf"]
 background_mode = 1
-background_color = Color(0, 0, 0.882353, 1)
+background_color = Color(0, 0.645333, 0.88, 1)
 
 [node name="Main" type="Node3D"]
 
